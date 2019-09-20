@@ -11,6 +11,11 @@ export class ProductGetComponent implements OnInit {
 
   products: Product[];
   constructor(private ps: ProductsService) { }
+  deleteProduct(id) {
+    this.ps.deleteProduct(id).subscribe(res => {
+      this.products.splice(id, 1);
+    });
+}
 
   ngOnInit() {
     this.ps
@@ -19,5 +24,6 @@ export class ProductGetComponent implements OnInit {
         this.products = data;
     });
   }
+
 
 }
