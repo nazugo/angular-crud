@@ -24,10 +24,12 @@ import { ProductsService } from './products.service';
     AppRoutingModule,
     SlimLoadingBarModule,
     ReactiveFormsModule,
-    HttpClientModule,
+    HttpClientModule
+
+  ],
+  providers: [
     ProductsService
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
   export class AppModule { }
